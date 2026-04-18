@@ -1,6 +1,6 @@
 # ==============================================
 # Multi-Company Financial Comparison Analysis System
-# Read Excel from GitHub | Macaron Color Scheme | Full Button Interaction
+# Local Excel File | Macaron Color Scheme | Full Button Interaction
 # ==============================================
 import streamlit as st
 import pandas as pd
@@ -26,7 +26,7 @@ colors = [
     "#FFB7FF", "#D9B7FF", "#B7D9FF"
 ]
 
-plt.rcParams["font.sans-serif"] = ["Arial", "SimHei"]  # Keep Chinese support for local test
+plt.rcParams["font.sans-serif"] = ["Arial", "SimHei"]
 plt.rcParams["axes.unicode_minus"] = False
 
 # --------------------------
@@ -36,17 +36,21 @@ st.title("📊 Multi-Company Financial Comparison Analysis System")
 st.markdown("---")
 
 # ==============================================
-# ✅ Core: Read Excel from YOUR GitHub (direct use!)
+# ✅ Core: Read Local Excel File (100% stable)
 # ==============================================
-GITHUB_EXCEL_URL = "https://raw.githubusercontent.com/keni3198/my-first-project/main/company_finance_data.xlsx"
-
 @st.cache_data
 def load_data():
-    df = pd.read_excel(GITHUB_EXCEL_URL)
+    # Read local Excel file (synced with GitHub repo)
+    df = pd.read_excel("company_finance_data.xlsx")
     return df
 
-df = load_data()
-st.success("✅ Data loaded successfully!")
+try:
+    df = load_data()
+    st.success("✅ Data loaded successfully!")
+except Exception as e:
+    st.error(f"❌ Data load failed: {str(e)}")
+    st.info("Please check if 'company_finance_data.xlsx' is in the same folder as app.py")
+    st.stop()
 
 # ==============================================
 # Sidebar: Company + Year Selection (all buttons, no input)
