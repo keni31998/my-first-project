@@ -26,13 +26,16 @@ plt.rcParams["font.sans-serif"] = ["Arial", "SimHei"]
 plt.rcParams["axes.unicode_minus"] = False
 
 # --------------------------
-# Colorful Welcome Text
+# Welcome Text + Platform Description
 # --------------------------
 st.markdown(
     """
     <h1 style='text-align: center; color: #FF6B6B;'>
     👋 Hello, Welcome to Connie's Interactive Financial Dashboard! 📊
     </h1>
+    <p style='text-align: center; font-size: 18px; color: #888888;'>
+    This is an interactive platform for multi-company financial performance comparison, featuring 8 professional charts and smart analysis.
+    </p>
     """,
     unsafe_allow_html=True
 )
@@ -272,7 +275,7 @@ st.info(smart_analysis(df7_agg, "assets"))
 st.divider()
 
 # ==============================================================================
-# 8 Comprehensive Capability Radar Chart (Added comparison table)
+# 8 Comprehensive Capability Radar Chart (Added comparison table + FIXED error)
 # ==============================================================================
 st.header("8. Comprehensive Capability Radar Chart")
 col1, col2 = st.columns([3, 1])
@@ -325,9 +328,11 @@ for idx, (_, row) in enumerate(df8.iterrows()):
 st.subheader("📊 Numerical Comparison Table")
 st.dataframe(pd.DataFrame(comparison_data), use_container_width=True)
 
-# Smart analysis for radar chart
+# Smart analysis for radar chart (FIXED error: exclude "Company" key)
 if len(comp8) >= 2:
-    max_comp = max(comparison_data, key=lambda x: sum(x.values()))
+    def total_score(x):
+        return sum(v for k, v in x.items() if k != "Company")
+    max_comp = max(comparison_data, key=total_score)
     st.info(f"📊 Smart Analysis: **{max_comp['Company']}** has the highest overall comprehensive score, leading in multiple dimensions.")
 
 st.markdown("---")
