@@ -69,7 +69,7 @@ col1, col2 = st.columns([3, 1])
 with col1:
     comp1 = st.multiselect("Select companies", all_companies, key="c1", default=all_companies[:2])
 with col2:
-    y1_start, y1_end = st.select_slider("Year range", all_years, all_years[[0, -1]], key="y1")
+    y1_start, y1_end = st.select_slider("Year range", all_years, (all_years[0], all_years[-1]), key="y1")
 
 df1 = df[(df["company_name"].isin(comp1)) & (df["fyear"] >= y1_start) & (df["fyear"] <= y1_end)]
 cmap1 = get_color_map(comp1)
@@ -92,7 +92,7 @@ col1, col2 = st.columns([3, 1])
 with col1:
     comp2 = st.multiselect("Select companies", all_companies, key="c2", default=comp1)
 with col2:
-    y2_start, y2_end = st.select_slider("Year range", all_years, all_years[[0, -1]], key="y2")
+    y2_start, y2_end = st.select_slider("Year range", all_years, (all_years[0], all_years[-1]), key="y2")
 
 df2 = df[(df["company_name"].isin(comp2)) & (df["fyear"] >= y2_start) & (df["fyear"] <= y2_end)]
 cmap2 = get_color_map(comp2)
@@ -155,7 +155,7 @@ col1, col2 = st.columns([3, 1])
 with col1:
     comp5 = st.multiselect("Select companies", all_companies, key="c5", default=comp2)
 with col2:
-    y5_start, y5_end = st.select_slider("Year range", all_years, all_years[[0, -1]], key="y5")
+    y5_start, y5_end = st.select_slider("Year range", all_years, (all_years[0], all_years[-1]), key="y5")
 
 df5 = df[(df["company_name"].isin(comp5)) & (df["fyear"] >= y5_start) & (df["fyear"] <= y5_end)]
 cmap5 = get_color_map(comp5)
@@ -199,7 +199,7 @@ col1, col2 = st.columns([3, 1])
 with col1:
     comp7 = st.multiselect("Select companies", all_companies, key="c7", default=comp1)
 with col2:
-    y7_start, y7_end = st.select_slider("Year range", all_years, all_years[[0, -1]], key="y7")
+    y7_start, y7_end = st.select_slider("Year range", all_years, (all_years[0], all_years[-1]), key="y7")
 
 df7 = df[(df["company_name"].isin(comp7)) & (df["fyear"] >= y7_start) & (df["fyear"] <= y7_end)]
 cmap7 = get_color_map(comp7)
