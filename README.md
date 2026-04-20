@@ -1,8 +1,8 @@
 # Multi-Company Financial Interactive Analysis System
 多公司财务交互分析系统
 
-1. Project Overview 
-This is an interactive financial analysis tool for multi-company performance comparison. Users can freely select companies and years to view 8 professional charts, and get automatic smart analysis conclusions.
+#1. Project Overview 
+#This is an interactive financial analysis tool for multi-company performance comparison. Users can freely select companies and years to view 8 professional charts, and get automatic smart analysis conclusions.
 
 2. Problem & User | 问题与用户
 Help investors, students, and analysts quickly compare corporate revenue, profit, margin, growth, assets, and market share through visual charts.
