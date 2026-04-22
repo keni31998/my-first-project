@@ -72,9 +72,11 @@ View all 8 charts and smart analysis
 
 8. Key Findings 
 
-Large companies have obvious advantages in total revenue and asset scale.
-Some tech companies have higher profit margins but unstable growth rates.
-Market share is concentrated in a few leading firms.
+1、Revenue and asset scale are dominated by large-cap companies like Walmart and Apple.
+
+2、Tech firms like Microsoft and NVIDIA maintain higher profit margins compared to retail peers.
+
+3、Market share is concentrated among a small number of industry leaders.
 
 
 9. Product Link
