@@ -72,11 +72,11 @@ View all 8 charts and smart analysis
 
 8. Key Findings 
 
-1、Revenue and asset scale are dominated by large-cap companies like Walmart and Apple.
+（1）Revenue and asset scale are dominated by large-cap companies like Walmart and Apple.
 
-2、Tech firms like Microsoft and NVIDIA maintain higher profit margins compared to retail peers.
+（2）Tech firms like Microsoft and NVIDIA maintain higher profit margins compared to retail peers.
 
-3、Market share is concentrated among a small number of industry leaders.
+（3）Market share is concentrated among a small number of industry leaders.
 
 
 9. Product Link
