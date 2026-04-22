@@ -77,8 +77,8 @@ Some tech companies have higher profit margins but unstable growth rates.
 Market share is concentrated in a few leading firms.
 
 
-9. Product Link | 产品链接
-（你部署后把 Streamlit 链接贴这里）Demo Video: （贴你的视频链接）
+9. Product Link 
+(https://my-first-project-adzkxeda4o8f6icp3jretw.streamlit.app/)
 
 
 10. Limitations
